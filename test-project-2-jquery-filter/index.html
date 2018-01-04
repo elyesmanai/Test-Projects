@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Filter</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<button id="all"> All </button>
+			<button id="webbtn"> Web </button>
+			<button id="mobbtn"> Mobile </button>
+			<button id="gamebtn"> Games </button>
+			<button id="designbtn"> Design </button>
+		</div>
+		<br><br><br>
+		<div class="row">
+			<div class="col-xs-2 web">web1</div>
+			<div class="col-xs-2 mobile">mobile1</div>
+			<div class="col-xs-2 design">design1</div>
+			<div class="col-xs-2 games">games1</div>
+			<div class="col-xs-2 web">web2</div>
+			<div class="col-xs-2 design">design2</div>
+			<div class="col-xs-2 design">design3</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 web">web3</div>
+			<div class="col-xs-2 mobile">mobile2</div>
+			<div class="col-xs-2 design">design4</div>
+			<div class="col-xs-2 games">games2</div>
+			<div class="col-xs-2 web">web4</div>
+			<div class="col-xs-2 design">design5</div>
+			<div class="col-xs-2 design">design6</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-2 web">web5</div>
+			<div class="col-xs-2 mobile">mobile3</div>
+			<div class="col-xs-2 design">design7</div>
+			<div class="col-xs-2 games">games3</div>
+			<div class="col-xs-2 web">web6</div>
+			<div class="col-xs-2 design">design8</div>
+			<div class="col-xs-2 design">design9</div>
+		</div>
+	</div>
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script type="text/javascript">
+
+	$("#all").click(function(){
+		$(".web").show();
+		$(".mobile").show();
+		$(".games").show();
+		$(".design").show();
+	});
+
+	$("#mobbtn").click(function(){
+		$(".web").hide();
+		$(".mobile").show();
+		$(".games").hide();
+		$(".design").hide();
+	});
+
+	$("#webbtn").click(function(){
+		$(".web").show();
+		$(".mobile").hide();
+		$(".games").hide();
+		$(".design").hide();
+	});
+
+	$("#gamebtn").click(function(){
+		$(".web").hide();
+		$(".mobile").hide();
+		$(".games").show();
+		$(".design").hide();
+	});
+
+	$("#designbtn").click(function(){
+		$(".web").hide();
+		$(".mobile").hide();
+		$(".games").hide();
+		$(".design").show();
+	});
+</script>
+</html>

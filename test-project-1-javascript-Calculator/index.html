@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript calculator</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+	var e1 ="";
+	var e2 = "";
+	var n1 = 0;
+	var op = "";
+	var r = "";
+	var a = 9;
+	function add(a){
+		switch(a){
+
+			case "0" : if (n1==0) {
+					   e1 = e1 + a; 
+					   $("#screen").attr("value",e1); 
+					   break;	
+					   }else if (n1==1) {
+					   e2 = e2 + a; 
+					  $("#screen").attr("value",e2); 
+					   break;	
+					   }					
+			case "1" : if (n1==0) {
+					   e1 = e1 + a; 
+					  $("#screen").attr("value",e1); 
+					   break;	
+					   }else if (n1==1) {
+					   e2 = e2 + a; 
+					  $("#screen").attr("value",e2); 
+					   break;	
+					   }	
+			case "2" : if (n1==0) {
+					   e1 = e1 + a; 
+					  $("#screen").attr("value",e1); 
+					   break;	
+					   }else if (n1==1) {
+					   e2 = e2 + a; 
+					  $("#screen").attr("value",e2); 
+					   break;	
+					   }	
+			case "3" : if (n1==0) {
+					   e1 = e1 + a; 
+					  $("#screen").attr("value",e1); 
+					   break;	
+					   }else if (n1==1) {
+					   e2 = e2 + a; 
+					  $("#screen").attr("value",e2); 
+					   break;	
+					   }	
+			case "4" :  if (n1==0) {
+					   e1 = e1 + a; 
+					  $("#screen").attr("value",e1); 
+					   break;	
+					   }else if (n1==1) {
+					   e2 = e2 + a; 
+					  $("#screen").attr("value",e2); 
+					   break;	
+					   }	
+			case "5" :  if (n1==0) {
+					   e1 = e1 + a; 
+					  $("#screen").attr("value",e1); 
+					   break;	
+					   }else if (n1==1) {
+					   e2 = e2 + a; 
+					  $("#screen").attr("value",e2); 
+					   break;	
+					   }	
+			case "6" :  if (n1==0) {
+					   e1 = e1 + a; 
+					  $("#screen").attr("value",e1); 
+					   break;	
+					   }else if (n1==1) {
+					   e2 = e2 + a; 
+					  $("#screen").attr("value",e2); 
+					   break;	
+					   }	
+			case "7" :  if (n1==0) {
+					   e1 = e1 + a; 
+					  $("#screen").attr("value",e1); 
+					   break;	
+					   }else if (n1==1) {
+					   e2 = e2 + a; 
+					  $("#screen").attr("value",e2); 
+					   break;	
+					   }	
+			case "8" :  if (n1==0) {
+					   e1 = e1 + a; 
+					  $("#screen").attr("value",e1); 
+					   break;	
+					   }else if (n1==1) {
+					   e2 = e2 + a; 
+					  $("#screen").attr("value",e2); 
+					   break;	
+					   }	
+			case "9" :  if (n1==0) {
+					   e1 = e1 + a; 
+					  $("#screen").attr("value",e1); 
+					   break;	
+					   }else if (n1==1) {
+					   e2 = e2 + a; 
+					  $("#screen").attr("value",e2); 
+					   break;	
+					   }	
+			case "+" : n1 = 1; op=a; $("#screen").attr("value",op); break;
+			case "-" : n1 = 1; op=a; $("#screen").attr("value",op); break;
+			case "*" : n1 = 1; op=a; $("#screen").attr("value",op); break;
+			case "/" : n1 = 1; op=a; $("#screen").attr("value",op); break;
+			case "%" : n1 = 1; op=a; $("#screen").attr("value",op); break;
+			  
+			case "=" : var k1 =  parseInt(e1); var k2 = parseInt(e2);
+						switch(op){
+							case "+": r = k1 + k2; 
+									$("#screen").attr("value",r); 
+									n1=0;
+									k1="";
+									k2=""
+									e1="";
+									e2="";
+									break;
+							case "*": r = k1 * k2; $("#screen").attr("value",r);n1=0;
+									k1="";
+									k2=""
+									e1="";
+									e2=""; break;
+							case "-": r = k1 - k2; $("#screen").attr("value",r);n1=0;
+									k1="";
+									k2=""
+									e1="";
+									e2=""; break;
+							case "/": r = k1 / k2; $("#screen").attr("value",r); n1=0;
+									k1="";
+									k2=""
+									e1="";
+									e2="";break;
+							case "%": r = k1 % k2; $("#screen").attr("value",r); n1=0;
+									k1="";
+									k2=""
+									e1="";
+									e2="";break;
+						}
+						
+						break;
+			default : prompt("error");
+		}
+	}
+
+</script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 ">
+				<input id="screen" type="text" value="" name="">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-3 number"><button value="1" onclick="add(this.value)">1</button></div>
+			<div class="col-xs-3 number"><button value="2" onclick="add(this.value)">2</button></div>
+			<div class="col-xs-3 number"><button value="3" onclick="add(this.value)">3</button></div>
+			<div class="col-xs-3 operand"><button value="*" onclick="add(this.value)">*</button></div>
+		</div>
+		<div class="row">
+			<div class="col-xs-3 number"><button value="4" onclick="add(this.value)">4</button></div>
+			<div class="col-xs-3 number"><button value="5" onclick="add(this.value)">5</button></div>
+			<div class="col-xs-3 number"><button value="6" onclick="add(this.value)">6</button></div>
+			<div class="col-xs-3 operand"><button value="/" onclick="add(this.value)">/</button></div>
+		</div>
+		<div class="row">
+			<div class="col-xs-3 number"><button value="7" onclick="add(this.value)">7</button></div>
+			<div class="col-xs-3 number"><button value="8" onclick="add(this.value)">8</button></div>
+			<div class="col-xs-3 number"><button value="9" onclick="add(this.value)">9</button></div>
+			<div class="col-xs-3 operand"><button value="%" onclick="add(this.value)">%</button></div>
+		</div>
+		<div class="row">
+			<div class="col-xs-3 operand"><button value="+" onclick="add(this.value)">+</button></div>
+			<div class="col-xs-3 operand"><button value="-" onclick="add(this.value)">-</button></div>
+			<div class="col-xs-3 operand"><button value="/" onclick="add(this.value)">/</button></div>
+			<div class="col-xs-3 operand"><button value="=" onclick="add(this.value)">=</button></div>
+		</div>
+		</div>	
+	</div>
+</body>
+
+
+</html>
